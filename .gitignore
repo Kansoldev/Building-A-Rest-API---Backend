@@ -1,2 +1,8 @@
+/.agents
+/.claude
+/.windsurf
 /node_modules
+/src/generated/prisma
+
 .env
+pnpm-workspace.yaml
