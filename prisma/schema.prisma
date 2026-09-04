@@ -11,3 +11,16 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model User {
+  /*
+    @id indicates that the `id` column is the primary key
+    @default is used to define a default value for a field,
+    in this case, a unique ID with the uuid() function
+  */
+  id String @id @default(uuid())
+  name String
+  email String @unique // @unique ensures there are no duplicates for this column
+  password String
+  createdAt DateTime @default(now())
+}
